@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "_comment": "Replaces GitHub file access + Azure AI Search + Confluence + DevOps specs",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./src",
+        "./specs",
+        "./skills",
+        "./docs",
+        "./data",
+        "./prompts"
+      ]
+    },
+    "git": {
+      "_comment": "Replaces GitHub version control and history",
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "."
+      ]
+    },
+    "memory": {
+      "_comment": "Replaces persistent context and glossary (no corporate equivalent)",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "everything": {
+      "_comment": "MCP primitives exploration (no corporate equivalent)",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ]
+    }
+  }
+}
